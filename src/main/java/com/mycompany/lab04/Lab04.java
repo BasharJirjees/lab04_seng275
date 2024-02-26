@@ -12,6 +12,6 @@ package com.mycompany.lab04;
 public class Lab04 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        //Do Nothing
     }
 }

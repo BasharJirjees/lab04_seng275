@@ -1,3 +1,4 @@
+package testing;
 import com.mycompany.lab04.CollectionUtils;
 import static org.junit.jupiter.api.Assertions.*;
 

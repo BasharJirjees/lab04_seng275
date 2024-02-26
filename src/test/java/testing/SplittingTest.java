@@ -1,3 +1,4 @@
+package testing;
 import com.mycompany.lab04.Splitting;
 import org.junit.jupiter.api.Test;
 
