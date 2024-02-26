@@ -18,6 +18,8 @@ class ComplexAddTest {
 		
 		assertEquals(1,ca._ComplexAdd(-1, 0));
 		
+		assertEquals(1, ca._ComplexAdd(0, -1));
+		
 		assertEquals(3,ca._ComplexAdd(3, 0));
 		
 		assertEquals(2,ca._ComplexAdd(3, -1));
@@ -28,9 +30,9 @@ class ComplexAddTest {
 		
 		assertEquals(0,ca._ComplexAdd(-1, 1));
 		
-        assertEquals(Integer.MAX_VALUE, ca._ComplexAdd(Integer.MAX_VALUE, 0));
+        assertEquals((int) 2e35, ca._ComplexAdd((int) 2e35, 0));
         
-        assertEquals(Integer.MIN_VALUE, ca._ComplexAdd(Integer.MIN_VALUE, 0));
+        assertEquals((int) 2e35, ca._ComplexAdd((int) 2e35, 0));
         
         assertEquals(1000, ca._ComplexAdd(-2000, 1000));
         
@@ -40,7 +42,15 @@ class ComplexAddTest {
         
         assertEquals(3000, ca._ComplexAdd(-2000, -1000));
         
-        assertEquals(1, ca._ComplexAdd(Integer.MIN_VALUE, Integer.MAX_VALUE));
+        assertEquals(0, ca._ComplexAdd(-2000, 2000));
+        
+        assertEquals(0, ca._ComplexAdd(-2000, 2000));
+        
+        assertEquals(1, ca._ComplexAdd((int) -2e35, (int) 2e35));
+        
+        assertEquals((int) 2e35 * 2, ca._ComplexAdd((int) 2e35, (int) 2e35));
+        
+        
         
 	}
 
