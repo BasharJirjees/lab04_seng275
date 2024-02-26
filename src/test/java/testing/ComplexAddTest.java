@@ -28,9 +28,20 @@ class ComplexAddTest {
 		
 		assertEquals(0,ca._ComplexAdd(-1, 1));
 		
-        assertEquals(Integer.MAX_VALUE, ca._ComplexAdd(Integer.MAX_VALUE, 0));  // Boundary condition: a is maximum integer
+        assertEquals(Integer.MAX_VALUE, ca._ComplexAdd(Integer.MAX_VALUE, 0));
+        
         assertEquals(Integer.MIN_VALUE, ca._ComplexAdd(Integer.MIN_VALUE, 0));
+        
+        assertEquals(1000, ca._ComplexAdd(-2000, 1000));
+        
+        assertEquals(1000, ca._ComplexAdd(2000, -1000));
+        
+        assertEquals(3000, ca._ComplexAdd(2000, 1000));
+        
+        assertEquals(3000, ca._ComplexAdd(-2000, -1000));
+        
         assertEquals(1, ca._ComplexAdd(Integer.MIN_VALUE, Integer.MAX_VALUE));
+        
 	}
 
 }
